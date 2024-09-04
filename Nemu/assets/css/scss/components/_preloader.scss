@@ -1,0 +1,49 @@
+//
+// Page Preloader //
+//
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  visibility: visible;
+  opacity: 1;
+  background: $body-bg;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+    width: 30px;
+    aspect-ratio: 1;
+    --g: no-repeat radial-gradient(circle closest-side, $color-theme 90%, $body-bg);
+    background: 
+      var(--g) 0 0,
+      var(--g) 0 100%,
+      var(--g) 100% 100%;
+    background-size: 40% 40%;
+    @include animation(loader-dots 0.8s infinite ease-out);
+  }
+}
+.loaded {
+  .preloader {
+    visibility: hidden;
+    opacity: 0;
+    @include transition(ease-out 0.4s);
+  }
+}
+@keyframes loader-dots {
+  25% {background-position:100% 0   ,0 100%,100% 100%}
+  50% {background-position:100% 0   ,0 0   ,100% 100%}
+  75% {background-position:100% 0   ,0 0   ,0    100%}
+  100%{background-position:100% 100%,0 0   ,0    100%}
+}
+@-webkit-keyframes loader-dots {
+  25% {background-position:100% 0   ,0 100%,100% 100%}
+  50% {background-position:100% 0   ,0 0   ,100% 100%}
+  75% {background-position:100% 0   ,0 0   ,0    100%}
+  100%{background-position:100% 100%,0 0   ,0    100%}
+}

@@ -1,0 +1,345 @@
+//
+// Box styles //
+//
+.border-radius {
+	border-radius: 25px;
+}
+.border-radius-top {
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+.corner-radius {
+	border-bottom-right-radius: 25px;
+}
+.border-dashed {
+	border: 1px dashed $charcoal-20;
+}
+.theme-dark {
+	.border-dashed {
+		border-color: $white-30;
+	}
+}
+.box-shadow {
+	@include box-shadow(0 8px 34px 0 rgba(22,24,26,0.08));
+	@include transition(ease-out 0.16s);
+	&:hover {
+		@include box-shadow(0 8px 38px 0 rgba(22,24,26,0.1));
+	}
+}
+
+
+//
+// Img Link box //
+//
+.img-link-box {
+	position: relative;
+	overflow: hidden;
+	@include transform(translate3d(0,0,0));
+	a {
+		display: block;
+	}
+	img {
+		@include transform(scale(1));
+		width: 100%;
+		@include transition(transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1));
+	}
+	&:hover {
+		img {
+			@include transform(scale(1.04));
+		}
+	}
+}
+
+
+//
+// Dashed box //
+//
+.dashed-box {
+	position: relative;
+	display: inline-block;
+	background: $white-30;
+	border-radius: 50px;
+	border: 1px dashed $charcoal-20;
+	padding: 11px 23px;
+}
+.theme-dark {
+	.dashed-box {
+		background: $charcoal-30;
+		border-color: $white-30;
+	}
+}
+@include breakpoint-less(md) {
+	.dashed-box {
+		padding: 9px 20px;
+	}
+}
+
+
+//
+// Background Colors //
+//
+.bg-charcoal { background: $charcoal; }
+.bg-theme { background: $color-theme; }
+.bg-theme-secondary { background: $color-theme-secondary; }
+.theme-dark {
+	.bg-theme { background: $color-theme-dark; }
+	.bg-theme-secondary { background: $color-theme-secondary-dark; }
+}
+.bg-white-90 { background: $white-90 }
+.bg-white-80 { background: $white-80 }
+.bg-white-70 { background: $white-70 }
+.bg-white-60 { background: $white-60 }
+.bg-white-50 { background: $white-50 }
+.bg-white-40 { background: $white-40 }
+.bg-white-30 { background: $white-30 }
+.bg-white-20 { background: $white-20 }
+.bg-white-10 { background: $white-10 }
+
+.bg-lighter { background: white; }
+.bg-lighter-90 { background: $white-90; }
+.bg-lighter-80 { background: $white-80; }
+.bg-lighter-70 { background: $white-70; }
+.bg-lighter-60 { background: $white-60; }
+.bg-lighter-50 { background: $white-50; }
+.bg-lighter-40 { background: $white-40; }
+.bg-lighter-30 { background: $white-30; }
+.bg-lighter-20 { background: $white-20; }
+.bg-lighter-10 { background: $white-10; }
+.theme-dark {
+	.bg-lighter { background: $charcoal; }
+	.bg-lighter-90 { background: $charcoal-90; }
+	.bg-lighter-80 { background: $charcoal-80; }
+	.bg-lighter-70 { background: $charcoal-70; }
+	.bg-lighter-60 { background: $charcoal-60; }
+	.bg-lighter-50 { background: $charcoal-50; }
+	.bg-lighter-40 { background: $charcoal-40; }
+	.bg-lighter-30 { background: $charcoal-30; }
+	.bg-lighter-20 { background: $charcoal-20; }
+	.bg-lighter-10 { background: $charcoal-10; }
+}
+
+
+//
+// Font Families //
+//
+.font-family-primary { font-family: $font-family-primary }
+.font-family-secondary { font-family: $font-family-secondary }
+.font-family-tertiary { font-family: $font-family-tertiary }
+
+
+//
+// Font Weights //
+//
+.fw-medium { font-weight: 500; }
+.fw-semi-bold { font-weight: 600; }
+
+
+//
+// Letter Spacing //
+//
+.letter-spacing-05 { letter-spacing: 0.5px; }
+.letter-spacing-1 { letter-spacing: 1px; }
+.letter-spacing-2 { letter-spacing: 2px; }
+.letter-spacing-3 { letter-spacing: 3px; }
+.letter-spacing-4 { letter-spacing: 4px; }
+
+
+//
+// Line Heights //
+//
+.line-height-100 { line-height: 1; }
+.line-height-110 { line-height: 1.1; }
+.line-height-120 { line-height: 1.2; }
+.line-height-130 { line-height: 1.3; }
+.line-height-140 { line-height: 1.4; }
+
+
+//
+// Text Colors //
+//
+.text-theme { color: $color-theme; }
+.text-theme-secondary { color: $color-theme-secondary; }
+.text-lighter-90 { color: $charcoal-90; }
+.text-lighter-80 { color: $charcoal-80; }
+.text-lighter-70 { color: $charcoal-70; }
+.text-lighter-60 { color: $charcoal-60; }
+.text-lighter-50 { color: $charcoal-50; }
+.text-lighter-40 { color: $charcoal-40; }
+.text-lighter-30 { color: $charcoal-30; }
+.text-lighter-20 { color: $charcoal-20; }
+.text-lighter-10 { color: $charcoal-10; }
+.theme-dark {
+	.text-lighter-90 { color: $white-90; }
+	.text-lighter-80 { color: $white-80; }
+	.text-lighter-70 { color: $white-70; }
+	.text-lighter-60 { color: $white-60; }
+	.text-lighter-50 { color: $white-50; }
+	.text-lighter-40 { color: $white-40; }
+	.text-lighter-30 { color: $white-30; }
+	.text-lighter-20 { color: $white-20; }
+	.text-lighter-10 { color: $white-10; }
+}
+.text-charcoal { color: $charcoal; }
+.text-charcoal-90 { color: $charcoal-90; }
+.text-charcoal-80 { color: $charcoal-80; }
+.text-charcoal-70 { color: $charcoal-70; }
+.text-charcoal-60 { color: $charcoal-60; }
+.text-charcoal-50 { color: $charcoal-50; }
+.text-charcoal-40 { color: $charcoal-40; }
+.text-charcoal-30 { color: $charcoal-30; }
+.text-charcoal-20 { color: $charcoal-20; }
+.text-charcoal-10 { color: $charcoal-10; }
+.text-white-90 { color: $white-90 }
+.text-white-80 { color: $white-80 }
+.text-white-70 { color: $white-70 }
+.text-white-60 { color: $white-60 }
+.text-white-50 { color: $white-50 }
+.text-white-40 { color: $white-40 }
+.text-white-30 { color: $white-30 }
+.text-white-20 { color: $white-20 }
+.text-white-10 { color: $white-10 }
+.text-golden-yellow { color: $color-golden-yellow; }
+
+
+//
+// Stroke Text //
+//
+.stroke-text {
+	color: $charcoal;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 1.4px;
+	-webkit-text-stroke-color: $charcoal;
+	@include breakpoint-less(lg) {
+		-webkit-text-stroke-width: 1.2px;
+	}
+}
+.theme-dark,
+[class*='bg-theme'], 
+[class*='bg-charcoal'] {
+	.stroke-text {
+		color: white;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke-color: white;
+	}
+}
+
+//
+// Text Fade //
+//
+.text-fade {
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: -5px;
+		left: 0;
+		background-image: linear-gradient(0deg, $body-bg 0%, transparent 100%);
+	}
+}
+.bg-charcoal {
+	.text-fade {
+		&:after { background-image: linear-gradient(0deg, $charcoal 0%, transparent 100%); }
+	}
+}
+.bg-theme {
+	.text-fade {
+		&:after { background-image: linear-gradient(0deg, $color-theme 0%, transparent 100%); }
+	}
+}
+.bg-theme-secondary {
+	.text-fade {
+		&:after { background-image: linear-gradient(0deg, $color-theme-secondary 0%, transparent 100%); }
+	}
+}
+.theme-dark {
+	.bg-theme {
+		.text-fade {
+			&:after { background-image: linear-gradient(0deg, $color-theme-dark 0%, transparent 100%); }
+		}
+	}
+	.bg-theme-secondary {
+		.text-fade {
+			&:after { background-image: linear-gradient(0deg, $color-theme-secondary-dark 0%, transparent 100%); }
+		}
+	}
+}
+
+
+//
+// Link Hover - Line //
+//
+.link-hover-underline {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.link-hover-line {
+    z-index: 1;
+    position: relative;
+    color: black;
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+        background: black;
+        height: 1px;
+        @include animation(line-out 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) both);
+    }
+    &:hover {
+        color: black;
+        &:before {
+            width: 100%;
+            @include animation(line-in 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) both);
+        }
+    }
+}
+.theme-dark,
+[class*='bg-theme'], 
+[class*='bg-charcoal'] {
+    .link-hover-line {
+    	color: white;
+        &:before {
+            background: white
+        }
+        &:hover {
+            color: white;
+        }
+    }
+}
+@-webkit-keyframes line-out {
+	0% {
+		@include transform(scaleX(1)); @include transform-origin(100% 50%);
+	}
+	100% {
+		@include transform(scaleX(0)); @include transform-origin(100% 50%);
+	}
+}
+@keyframes line-out {
+	0% {
+		@include transform(scaleX(1)); @include transform-origin(100% 50%);
+	}
+	100% {
+		@include transform(scaleX(0)); @include transform-origin(100% 50%);
+	}
+}
+@-webkit-keyframes line-in {
+	0% {
+		@include transform(scaleX(0)); @include transform-origin(0 50%);
+	}
+	100% {
+		@include transform(scale(1)); @include transform-origin(0 50%);
+	}
+}
+@keyframes line-in {
+	0% {
+		@include transform(scaleX(0)); @include transform-origin(0 50%);
+	}
+	100% {
+		@include transform(scale(1)); @include transform-origin(0 50%);
+	}
+}

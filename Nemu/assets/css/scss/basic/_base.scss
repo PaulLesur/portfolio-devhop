@@ -1,0 +1,253 @@
+//
+// Base styles //
+//
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	overflow-x: hidden;
+	position: relative;
+	z-index: 1;
+	background: $body-bg;
+	min-height: 100%;
+	color: $text-primary;
+	h1,h2,h3,h4,h5,h6,i, 
+	.h1,.h2,.h3,.h4,.h5,.h6 { color: $charcoal; }
+	a {
+		&:not([class^='button'], [class^='link-hover']) {
+			color: $charcoal;
+			&:hover, &:focus { color: $charcoal-80; }
+		}
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+//
+// Basic Coloring //
+//
+.theme-dark {
+	background: $dark;
+	color: $white-80;
+	h1,h2,h3,h4,h5,h6,i, 
+	.h1, .h2, .h3, .h4, .h5, .h6 { color: white; }
+	a {
+		&:not([class^='button'], [class^='link-hover']) {
+			color: white;
+			i {
+				color: white;
+			}
+			&:hover, &:focus { 
+				color: $white-80; 
+				i {
+					color: $white-80;
+				}
+			}
+		}
+	}
+}
+
+[class*='bg-theme'], 
+[class*='bg-charcoal'] {
+	color: $white-80;
+	h1,h2,h3,h4,h5,h6,i, 
+	.h1, .h2, .h3, .h4, .h5, .h6 { color: white; }
+	a {
+		&:not([class^='button'], [class^='link-hover']) {
+			color: white;
+			i {
+				color: white;
+			}
+			&:hover, &:focus { 
+				color: $white-80; 
+				i {
+					color: $white-80;
+				}
+			}
+		}
+	}
+}
+
+//
+// Container //
+//
+.container {
+	padding: 0 30px;
+}
+.container-fluid {
+	padding: 0 60px;
+	@include breakpoint-above(3xl) {
+		max-width: 1780px;
+	}
+	@include breakpoint-less(lg) {
+		padding: 0 50px;
+	}
+	@include breakpoint-less(md) {
+		padding: 0 40px;
+	}
+	@include breakpoint-less(sm) {
+		padding: 0 30px;
+	}
+}
+
+//
+// Section Spacing //
+//
+.section-spacing {
+	overflow: hidden;
+	padding: 70px 0;
+	@include breakpoint-less(lg) {
+		padding: 60px 0;
+	}
+}
+
+//
+// Hero Avatar //
+//
+.hero-avatar {
+	position: relative;
+	display: inline-block;
+	img {
+		border-top-left-radius: 50%;
+		border-bottom-left-radius: 50%;
+	}
+	&:before {
+		z-index: -1;
+		content: '';
+		position: absolute;
+		top: -15px;
+		bottom: -15px;
+		right: 15px;
+		background: $white-30;
+		width: 100%;
+		height: calc(100% + 30px);
+		border: 1px dashed $charcoal-20;
+		border-top-left-radius: 50%;
+		border-bottom-left-radius: 50%;
+	}
+	.avatar-icon {
+		position: absolute;
+		bottom: 20px;
+		left: 10px;
+		li {
+			a {
+				display: inline-block;
+				backdrop-filter: blur(5px);
+				background: $charcoal-40;
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 44px;
+				color: white;
+				i {
+					color: white;
+				}
+				&:hover {
+					background: $charcoal-30;
+				}
+			}
+		}
+	}
+}
+.theme-dark {
+	.hero-avatar {
+		&:before {
+			background: $charcoal-30;
+			border-color: $white-30;
+		}
+	}
+}
+
+//
+// Hire Status //
+//
+.hire-status {
+	display: inline-flex;
+	background: $white-30;
+	border: 1px dashed $charcoal-20;
+	border-radius: 50px;
+	padding: 11px 23px;
+	align-items: center;
+	span {
+		position: relative;
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		margin-right: 12px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 1;
+			border-radius: 50%;
+			@include animation(dot-animate 1500ms infinite linear);
+		}
+		&.dot-available {
+			background: $color-pastel-green;
+			&:before {
+				background: $color-pastel-green;
+			}
+		}
+		&.dot-unavailable {
+			background: red;
+			&:before {
+				background: red;
+			}
+		}
+	}
+}
+.theme-dark {
+	.hire-status {
+		background: $charcoal-30;
+		border-color: $white-30;
+	}
+}
+@include breakpoint-less(md) {
+	.hire-status {
+		padding: 9px 20px;
+	}
+}
+@keyframes dot-animate {
+	100%{ transform: scale(2.5); transform: scale(2.5); opacity: 0; }
+}
+@-webkit-keyframes dot-animate {
+	100%{ -webkit-transform: scale(2.5); transform: scale(2.5); opacity: 0; }
+}
+
+
+//
+// Cursor Gradient //
+//
+.cursor-gradient {
+	z-index: -1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	transform: translate(calc(-50% + 15px), -50%);
+	opacity: 0.4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter: blur(250px);
+	background-image: linear-gradient(#1100ff 10%, #ff00f2);
+	width: 360px;
+	height: 360px;
+	border-radius: 100%;
+	pointer-events: none;
+	@include transition(all 100ms ease-out);
+}
+.theme-dark {
+	.cursor-gradient {
+		opacity: 0.5;
+	}
+}

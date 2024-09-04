@@ -1,0 +1,14 @@
+//
+// Sliding Text //
+//
+.sliding-text, 
+.sliding-text-reverse {
+	.swiper-slide {
+		width: auto;
+	}
+}
+.sliding-boxes .swiper-wrapper, 
+.sliding-text .swiper-wrapper, 
+.sliding-text-reverse .swiper-wrapper {
+	transition-timing-function: linear;
+}

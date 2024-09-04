@@ -1,0 +1,51 @@
+//
+// Progress bar //
+//
+.progress-box {
+	.animated-progress {
+		position: relative;
+		background: $charcoal-10;
+		height: 4px;
+		margin-top: 4px;
+		border-radius: 3px;
+		div {
+			position: absolute;
+			display: block;
+		    background: $charcoal;
+			width: 10%;
+			height: 100%;
+			border-radius: 4px;
+			color: $charcoal;
+			@include transition(width 0.7s cubic-bezier(0.165, 0.84, 0.44, 1));
+			@include transition-delay(0.1s);
+			&:after {
+				content: attr(data-progress) '%';
+				position: absolute;
+				top: -30px;
+				right: 0;
+				opacity: 0;
+				font-family: $font-family-secondary;
+				font-size: 500;
+				@include transition(ease-out 0.16s);
+			}
+			&.progress-show {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+.theme-dark, 
+[class*='bg-charcoal'], 
+[class*='bg-theme'] {
+	.progress-box {
+		.animated-progress {
+			background: $white-10;
+			div {
+				background: white;
+				color: white;
+			}
+		}
+	}
+}

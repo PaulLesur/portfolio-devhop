@@ -1,0 +1,51 @@
+//
+// Font styles //
+//
+$font-family-primary: 'Open Sans', sans-serif;
+$font-family-secondary: 'Outfit', sans-serif;
+$font-family-tertiary: 'Poppins', sans-serif;
+
+//
+// Theme Color //
+//
+$body-bg: rgb(241, 245, 250);
+
+//
+// Basic Colors //
+//
+$text-primary: rgb(81, 84, 86);
+$text-primary-lighter: rgb(128, 131, 133);
+$dark: rgb(20, 24, 26);
+$charcoal: rgb(44, 57, 67);
+$charcoal-90: rgba(44, 57, 67, 0.9);
+$charcoal-80: rgba(44, 57, 67, 0.8);
+$charcoal-70: rgba(44, 57, 67, 0.7);
+$charcoal-60: rgba(44, 57, 67, 0.6);
+$charcoal-50: rgba(44, 57, 67, 0.5);
+$charcoal-40: rgba(44, 57, 67, 0.4);
+$charcoal-30: rgba(44, 57, 67, 0.3);
+$charcoal-20: rgba(44, 57, 67, 0.2);
+$charcoal-10: rgba(44, 57, 67, 0.1);
+$white-90: rgba(255, 255, 255, 0.9);
+$white-80: rgba(255, 255, 255, 0.8);
+$white-70: rgba(255, 255, 255, 0.7);
+$white-60: rgba(255, 255, 255, 0.6);
+$white-50: rgba(255, 255, 255, 0.5);
+$white-40: rgba(255, 255, 255, 0.4);
+$white-30: rgba(255, 255, 255, 0.3);
+$white-20: rgba(255, 255, 255, 0.2);
+$white-15: rgba(255, 255, 255, 0.15);
+$white-10: rgba(255, 255, 255, 0.1);
+$color-golden-yellow: #FFB657;
+$color-pastel-green: #77dd77;
+$color-theme: #9C7ECE;
+$color-theme-secondary: #7E88CE;
+$color-theme-dark: #7C64A4;
+$color-theme-secondary-dark: #646CA4;
+
+
+//
+// Gradient Colors //
+//
+$gradient-light: linear-gradient(30deg, #fff 0%, transparent 100%);
+$gradient-dark: linear-gradient(30deg, $charcoal 0%, transparent 100%);

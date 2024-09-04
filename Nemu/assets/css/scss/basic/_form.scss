@@ -1,0 +1,72 @@
+//
+// Forms //
+//
+input:not(.form-check-input), 
+textarea {
+	background: $white-30;
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 13px 24px;
+	border: 1px dashed $charcoal-30;
+	border-radius: 25px;
+	box-shadow: none;
+	font: 400 16px $font-family-primary;
+	@include transition(ease-out 0.12s);
+	&:focus, &:active {
+		outline: 0;
+		box-shadow: none;
+	}
+}
+textarea {
+	height: 180px;
+}
+input:not(.form-check-input), textarea, .form-control {
+	color: $text-primary;
+	&::-webkit-input-placeholder { color: $text-primary-lighter; }
+	&::-moz-placeholder { color: $text-primary-lighter; }
+	&:-ms-placeholder { color: $text-primary-lighter; }
+	&::-ms-placeholder { color: $text-primary-lighter; }
+	&::placeholder { color: $text-primary-lighter; }
+	&:focus {
+		border-color: $charcoal;
+	}
+}
+label {
+	font-size: 15px;
+}
+.theme-dark {
+	input:not(.form-check-input), 
+	textarea {
+		background: $charcoal-30;
+		border-color: $white-30;
+	}
+	input:not(.form-check-input), textarea, .form-control {
+		color: $white-80;
+		&::-webkit-input-placeholder { color: $white-70; }
+		&::-moz-placeholder { color: $white-70; }
+		&:-ms-placeholder { color: $white-70; }
+		&::-ms-placeholder { color: $white-70; }
+		&::placeholder { color: $white-70; }
+		&:focus {
+			border-color: white;
+		}
+	}
+}
+
+
+//
+// Contact Form Styles //
+//
+.submit-result {
+	span {
+		display: none;
+		@include transition(ease-out 0.2s);
+		&.show-result {
+			margin-top: 24px;
+			display: block;
+		}
+		&#success { color: green; }
+		&#error { color: red; }
+		.error-color { background: rgba(255, 0, 0, 0.1); }
+	}
+}

@@ -1,0 +1,146 @@
+//
+// Portfolio box //
+//
+.portfolio-box {
+	position: relative;
+	overflow: hidden;
+
+	a {
+		display: block;
+	}
+
+	// Image //
+	.portfolio-img {
+		position: relative;
+		overflow: hidden;
+		@include transform(scale(1) translate3d(0,0,0));
+		border-radius: 8px;
+		@include transition(transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1));
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(0deg, black 0%, transparent 100%);
+			opacity: 0.1;
+			@include transition(linear 0.1s);
+		}
+		img {
+			width: 100%;
+			aspect-ratio: 1/0.6;
+			object-fit: cover;
+			@include transition(transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
+		}
+	}
+
+	// Category //
+	.portfolio-category {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		opacity: 0;
+		visibility: hidden;
+		backdrop-filter: blur(5px);
+		background: $charcoal-30;
+		padding: 7px 15px;
+		border-radius: 30px;
+		color: white;
+		font-size: 0.9em;
+		font-family: $font-family-secondary;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		@include transition(linear 0.1s);
+	}
+
+	// Caption //
+	.portfolio-caption {
+		z-index: 1;
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		opacity: 0.5;
+		color: white;
+		@include transition(linear 0.06s);
+		* {
+			margin: 0;
+			color: white;
+		}
+	}
+
+	// Hover //
+	&:hover {
+		.portfolio-img {
+			@include transform(scale(0.98) translate3d(0,0,0));
+			&:after {
+				opacity: 0.3;
+			}
+			img {
+				@include transform(scale(1.06));
+			}
+		}
+		.portfolio-category {
+			visibility: visible;
+			opacity: 1;
+		}
+		.portfolio-caption {
+			opacity: 1;
+		}
+	}
+}
+
+
+//
+// Portfolio Slider //
+//
+.portfolio-slider {
+	&.swiper, &.swiper-container {
+		overflow: visible;
+	}
+	.swiper-slide {
+		display: flex;
+	}
+}
+
+
+//
+// Filter //
+//
+.filter {
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+			background: $charcoal-90;
+			padding: 11px 23px;
+			border-radius: 30px;
+			margin: 0 4px 0 0;
+			color: white;
+			cursor: pointer;
+			@include transition(linear 0.08s);
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover, &.mixitup-control-active {
+				background: $charcoal;
+			}
+		}
+	}
+}
+.theme-dark {
+	.filter {
+		ul {
+			li {
+				background: $white-10;
+				&:hover, &.mixitup-control-active {
+					background: $white-15;
+				}
+			}
+		}
+	}
+}

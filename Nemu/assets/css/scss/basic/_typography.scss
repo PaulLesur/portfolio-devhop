@@ -1,0 +1,64 @@
+//
+// Typography //
+//
+body {
+	font-family: $font-family-primary;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+h1,h2,h3,h4,h5,h6, 
+.h1,.h2,.h3,.h4,.h5,.h6 {
+	font-family: $font-family-secondary;
+	font-weight: 600;
+	@include breakpoint-less(md) {
+		margin-bottom: 6px;
+	}
+}
+
+p {
+	margin: 0;
+	line-height: 1.74;
+	@include breakpoint-less(md) {
+		line-height: 1.6;
+	}
+}
+.uppercase {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.font-small {
+	font-size: 0.9em;
+	line-height: 1.7;
+}
+.font-large {
+	font-size: 1.063em;
+	line-height: 1.6;
+}
+
+
+//
+// Font Icons //
+//
+i {
+	display: inline-block;
+}
+.icon-4xl {
+	i { font-size: 2.5em; }
+}
+.icon-3xl {
+	i { font-size: 2.2em; }
+}
+.icon-2xl {
+	i { font-size: 1.9em; }
+}
+.icon-xl {
+	i { font-size: 1.6em; }
+}
+.icon-lg {
+	i { font-size: 1.33em; }
+}
+.icon-sm {
+	i { font-size: 0.9em; }
+}

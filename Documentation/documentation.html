@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+    <meta name="keywords" content="">
+		<title>Nemu - Documentation</title>
+		<!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+		<!-- CSS -->
+		<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/prism/prism.css" rel="stylesheet">
+		<link href="assets/css/styles.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+		<link href="assets/font-awesome/css/all.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<div class="sidebar">
+			<div class="sidebar-logo">
+				<h4 class="fw-bold text-white">Nemu</h4>
+			</div>
+			<div class="nav-wrapper">
+				<ul class="nav">
+					<li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#introduction">Introduction</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#includedfiles">Included files</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#htmlstructure">HTML Structure</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#theme-dark">Theme Dark</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#scss">SCSS</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#fonts">Fonts &amp; Icons</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#contactform">Contact Form</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#maps">Maps</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#retina">Retina</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#helper-classes">Helper Classes</button></li>
+					<li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#credits">Credits</button></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="tab-content">
+
+			<div class="tab-pane fade show active" id="introduction">
+				<div class="title">
+					<h2>Introduction</h2>
+				</div>
+				<div class="content-box">
+					<div class="margin-bottom-20">
+						<p>Thank you for choosing "Nemu - Personal vCard/Portfolio Template". This documentation will help you to familiarise how the template is structured and how to use the features. If you have any questions that are beyond the scope of this help file, please feel free to email via our user page contact form <a href="https://themeforest.net/user/flatheme" target="_blank">here</a>.</p>
+					</div>
+					<div class="margin-bottom-20">
+						<p>If you like this template please don't forget rate it 5 :)</p>
+						<a href="https://themeforest.net/downloads" target="_blank">themeforest.net/downloads</a>
+					</div>
+					<ul class="list-unstyled margin-0">
+						<li>Author: <a href="https://themeforest.net/user/flatheme" target="_blank">FlaTheme</a></li>
+						<li>Contact: flatheme@gmail.com</li>
+						<li>Created on: Aug 24, 2024</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="includedfiles">
+				<div class="title">
+					<h2>Included Files</h2>
+				</div>
+				<div class="content-box">
+					<ul class="list-folder">
+						<li class="folder-open"><span class="font-weight-bold">Nemu</span> - Template files
+							<ul>
+								<li class="folder-open margin-top-10"><span class="font-weight-bold">assets</span> - All the neccessary source files of the template
+									<ul class="margin-top-10">
+										<li class="folder-open"><span class="font-weight-bold">css</span> - CSS and SCSS files
+											<ul class="margin-top-10">
+												<li><span class="font-weight-bold">scss</span> - All SCSS files</li>
+												<li class="folder-file-code"><span class="font-weight-bold">theme.css</span> - Output of SCSS (or Compiled SCSS)</li>
+											</ul>
+										</li>
+										<li><span class="font-weight-bold">images</span> - Images</li>
+										<li><span class="font-weight-bold">js</span> - JavaScript functions</li>
+										<li><span class="font-weight-bold">php</span> - PHP files</li>
+										<li><span class="font-weight-bold">plugins</span> - All the plugins that are used in the template</li>
+									</ul>
+								</li>
+								<li><span class="font-weight-bold">index.html</span> - Main Home Page</li>
+								<li><span class="font-weight-bold">blog.html</span> - Blog List Page</li>
+								<li><span class="font-weight-bold">blog-single.html</span> - Blog Single Page</li>
+								<li><span class="font-weight-bold">portfolio.html</span> - Portfolio List Page</li>
+								<li><span class="font-weight-bold">portfolio-single.html</span> - Portfolio Single Page</li>
+							</ul>
+						</li>
+						<li><span class="font-weight-bold">Documentation</span> - Documentation files</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="htmlstructure">
+				<div class="title">
+					<h2>HTML Structure</h2>
+				</div>
+				<div class="content-box">
+<pre>
+<code class="language-html">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;meta name="keywords" content=""&gt;
+    &lt;title&gt;Nemu - Personal vCard/Portfolio Template&lt;/title&gt;
+    &lt;!-- Favicon --&gt;
+    &lt;link href="assets/images/favicon.png" rel="shortcut icon"&gt;
+    &lt;!-- CSS --&gt;
+    &lt;link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link href="assets/plugins/glightbox/glightbox.min.css" rel="stylesheet"&gt;
+    &lt;link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet"&gt;
+    &lt;link href="assets/css/theme.css" rel="stylesheet"&gt;
+    &lt;!-- Fonts/Icons --&gt;
+    &lt;link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"&gt;
+    &lt;link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body data-preloader="true"&gt;
+
+    &lt;!-- Header --&gt;
+    &lt;div class="header-wrapper"&gt;
+      ..
+    &lt;/div&gt;
+    &lt;!-- end Header --&gt;
+
+    ...
+
+    &lt;!-- Cursor Gradient --&gt;
+    &lt;div class="cursor-gradient"&gt;&lt;/div&gt;
+    &lt;!-- end Cursor Gradient --&gt;
+
+    &lt;!-- JavaScripts --&gt;
+    &lt;script src="assets/plugins/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/plugins/plugins.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/functions.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="theme-dark">
+				<div class="title">
+					<h2>Theme Dark</h2>
+				</div>
+				<div class="content-box">
+					<p>Theme of the template is light by default. In order to use the dark theme, simply add <mark>'theme-dark'</mark> class to the body tag.</p>
+					<div class="margin-top-30">
+<pre>
+<code class="language-html">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body class="theme-dark" data-preloader="true"&gt;
+
+    ...
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="scss">
+				<div class="title">
+					<h2>SCSS</h2>
+				</div>
+				<div class="content-box">
+					<p>SCSS is an extension of CSS, adding nested rules, variables, mixins, selector inheritance, and more. It's translated to well-formatted, standard CSS using the command line tool or a web-framework plugin.</p>
+					<p>"SCSS" (for "Sassy CSS") is a superset of CSS's syntax. This means that every valid CSS stylesheet is valid SCSS as well. SCSS files use the extension <mark>.scss</mark></p>
+					<div class="margin-top-30">
+						<h5>Recommended Compiler - Scout-App</h5>
+						<p class="margin-top-10">We recommend you to use an application called <a href="http://scout-app.io" target="_blank">Scout-App</a> (v2.12.12) for converting SCSS to CSS. Scout-App can run in windows, linux and mac.</p>
+						<p class="margin-top-10"><a href="http://scout-app.io" target="_blank">Click here</a> to download the application.</p>
+						<p class="margin-top-10">This video demonstrates how to use Scout-App application:</p>
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe src="https://www.youtube.com/embed/6zA78zMsH9w?rel=0" allowfullscreen></iframe>
+						</div>
+						<div class="embed-responsive embed-responsive-16by9 margin-top-10">
+							<iframe src="https://www.youtube.com/embed/8CGKSfSxjlc?rel=0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="fonts">
+				<div class="title">
+					<h2>Fonts & Icons</h2>
+				</div>
+				<div class="content-box">
+					<div class="margin-bottom-50">
+						<h4 class="text-center margin-bottom-30">Fonts</h4>
+						<p>Nemu uses <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Open Sans</a> sans-serif and, <a href="https://fonts.google.com/specimen/Outfit" target="_blank">Outfit</a> sans-serif, and <a href="https://fonts.google.com/specimen/Poppins" target="_blank">Poppins</a> fonts from <a href="https://fonts.google.com" target="_blank">Google Fonts Library</a>. And it's included through <mark>assets/css/scss/theme.scss</mark></p>
+						<p class="font-italic">theme.scss(line 4)</p>
+<pre>
+<code class="language-scss">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Outfit:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+</code>
+</pre>
+						<div class="margin-top-10">
+							<p>You can use the following classes to set the font family of an element:</p>
+							<ul class="margin-top-10">
+								<li><span class="font-weight-bold">.font-family-primary</span> - Open Sans, sans-serif</li>
+								<li><span class="font-weight-bold">.font-family-secondary</span> - Outfit, sans-serif</li>
+								<li><span class="font-weight-bold">.font-family-tertiary</span> - Poppins, sans-serif</li>
+							</ul>
+						</div>
+					</div>
+					<div>
+						<h4 class="text-center margin-bottom-30">Icons</h4>
+						<p><a href="https://icons.getbootstrap.com" target="_blank">Bootstrap Icons</a> and, <a href="https://fontawesome.com" target="_blank">FontAwesome</a> sets are included in the template.</p>
+						<p>By default, icons will appear at 1em(16px). And you can change the icon size by using classes:</p>
+						<ul class="margin-top-10">
+							<li><span class="font-weight-bold">.icon-sm</span> - sets icon size to 0.09em</li>
+							<li><span class="font-weight-bold">.icon-lg</span> - sets icon size to 1.33em</li>
+							<li><span class="font-weight-bold">.icon-xl</span> - sets icon size to 1.6em</li>
+							<li><span class="font-weight-bold">.icon-2xl</span> - sets icon size to 1.9em</li>
+							<li><span class="font-weight-bold">.icon-3xl</span> - sets icon size to 2.2em</li>
+							<li><span class="font-weight-bold">.icon-4xl</span> - sets icon size to 2.5em</li>
+						</ul>
+						<p>You should add the size class to the parent element of an icon:</p>
+<pre>
+<code class="language-html">
+&lt;div class="icon-lg"&gt;
+  &lt;i class="bi bi-check"&gt;&lt;/i&gt;
+  &lt;i class="bi bi-check"&gt;&lt;/i&gt;
+&lt;/div&gt;
+</code>
+</pre>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="contactform">
+				<div class="title">
+					<h2>Contact Form</h2>
+				</div>
+				<div class="content-box">
+					<p>Basic Contact form:</p>
+<pre>
+<code class="language-html">
+&lt;div class="contact-form"&gt;
+  &lt;form class="form-border-radius" method="post" id="contactform"&gt;
+    &lt;div class="row gx-3 gy-0"&gt;
+      &lt;div class="col-12 col-md-6"&gt;
+        &lt;input type="text" id="name" name="name" placeholder="Name" required&gt;
+      &lt;/div&gt;
+      &lt;div class="col-12 col-md-6"&gt;
+        &lt;input type="email" id="email" name="email" placeholder="E-Mail" required&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;input type="text" id="subject" name="subject" placeholder="Subject" required&gt;
+    &lt;textarea name="message" id="message" placeholder="Message"&gt;&lt;/textarea&gt;
+    &lt;button class="button button-lg button-rounded" type="submit"&gt;
+      Send Message
+    &lt;/button&gt;
+  &lt;/form&gt;
+  &lt;!-- Submit result --&gt;
+  &lt;div class="submit-result"&gt;
+    &lt;span id="success"&gt;Thank you! Your Message has been sent.&lt;/span&gt;
+    &lt;span id="error"&gt;Something went wrong, Please try again!&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+					<p>The template has ready to use AJAX/PHP contact form built in it. In order to recieve emails directly to your email address just simply replace <mark>your-email@example.com</mark> with your email address in <mark>assets/php/contact-form.php</mark> file.</p>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="maps">
+				<div class="title">
+					<h2>Google Maps</h2>
+				</div>
+				<div class="content-box">
+					<p>Nemu uses <a href="https://hpneo.github.io/gmaps/" target="_blank">gmaps</a> plugin to show Google Maps. By default, the maps width is set to 100% and height is set to 0 and you can set the height of the map using classes.<br>You can use multiple maps on one page. And every single map should have different id's <span class="font-italic">(#map1, #map2 etc.)</span>.</p>
+					<ul class="margin-top-10">
+						<li><span class="font-weight-bold">gmap-sm</span> - sets height to 300px</li>
+						<li><span class="font-weight-bold">gmap-md</span> - sets height to 350px</li>
+						<li><span class="font-weight-bold">gmap-lg</span> - sets height to 400px</li>
+					</ul>
+					<p class="margin-top-30">Basic Map:</p>
+<pre style="margin-bottom: 8px;">
+<code class="language-html">
+&lt;div id="map1" class="gmap gmap-md border-radius" data-latitude="51.513569" data-longitude="-0.123443"&gt;&lt;/div&gt;
+</code>
+</pre>
+					<p><a href="https://www.findlatitudeandlongitude.com" target="_blank">Click here</a> to find your Latitude and Longitude.</p>
+					<p class="margin-top-30">In order to use Google Maps, you need to get Google API Key first. <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">Click here</a> to get your API Key.</p>
+					<p>Then place your API Key in <mark>'YOUR_API_KEY'</mark> in your HTML:</p>
+<pre class="margin-0">
+<code class="language-html">
+&lt;script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"&gt;&lt;/script&gt;
+</code>
+</pre>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="retina">
+				<div class="title">
+					<h2>Retina</h2>
+				</div>
+				<div class="content-box">
+					<p>retina.js checks the retina activated images on the page to see if there is a high-resolution version of that image on the server. If a high-resolution variant exists, the script will swap in that image in-place.</p>
+					<p>For example, if your picture is located at "/images/my-picture.jpg" and the markup for this image looks like this:</p>
+<pre>
+<code class="language-html">
+&lt;img src="images/picture.jpg" data-rjs="2"&gt;
+</code>
+</pre>
+					<p>retina.js will look for a corresponding image located at "/images/my-picture@2x.jpg" when it's activated. If it finds the @2x image on your server then it will load that onto your web page, effectively transforming your picture's markup to look like this:</p>
+<pre>
+<code class="language-html">
+&lt;img src="images/picture@2x.jpg"&gt;
+</code>
+</pre>
+					<p>Please apply <mark>data-rjs="2"</mark> to the image you want to activate the retina.js on:</p>
+<pre class="margin-bottom-0">
+<code class="language-html">
+&lt;img src="images/picture.jpg" data-rjs="2"&gt;
+</code>
+</pre>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="helper-classes">
+				<div class="title">
+					<h2>Helper Classes</h2>
+				</div>
+
+				<div class="content-box">
+					<h4 class="margin-bottom-40 text-center">Text Alignment</h4>
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<th>HTML Class Names</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>text-start</td>
+								<td>Equals to 'text-align: left;'</td>
+							</tr>
+							<tr>
+								<td>text-center</td>
+								<td>Equals to 'text-align: center;'</td>
+							</tr>
+							<tr>
+								<td>text-end</td>
+								<td>Equals to 'text-align: right;'</td>
+							</tr>
+						</table>
+					</div>
+					<p><a href="https://getbootstrap.com/docs/5.0/utilities/text/" target="_blank">Click here</a> to get more information about bootstrap text alignment.</p>
+				</div>
+
+				<div class="content-box margin-top-60">
+					<h4 class="margin-bottom-40 text-center">Typography</h4>
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<th>HTML Class Names</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>font-family-primary</td>
+								<td>Equals to 'font-family: 'Open Sans', sans-serif'</td>
+							</tr>
+							<tr>
+								<td>font-family-secondary</td>
+								<td>Equals to 'font-family: 'Poppins', sans-serif'</td>
+							</tr>
+							<tr>
+								<td>font-family-monospace</td>
+								<td>Equals to 'font-family: 'Roboto Mono', monospace'</td>
+							</tr>
+							<tr>
+								<td>font-small</td>
+								<td>Equals to 'font-size: 0.9em'</td>
+							</tr>
+							<tr>
+								<td>font-large</td>
+								<td>Equals to 'font-size: 1.063em'</td>
+							</tr>
+							<tr>
+								<td>fw-lighter</td>
+								<td>Equals to 'font-weight: 200'</td>
+							</tr>
+							<tr>
+								<td>fw-light</td>
+								<td>Equals to 'font-weight: 300'</td>
+							</tr>
+							<tr>
+								<td>fw-normal</td>
+								<td>Equals to 'font-weight: 400'</td>
+							</tr>
+							<tr>
+								<td>fw-medium</td>
+								<td>Equals to 'font-weight: 500'</td>
+							</tr>
+							<tr>
+								<td>fw-semi-bold</td>
+								<td>Equals to 'font-weight: 600'</td>
+							</tr>
+							<tr>
+								<td>fw-bold</td>
+								<td>Equals to 'font-weight: 700'</td>
+							</tr>
+							<tr>
+								<td>fw-bolder</td>
+								<td>Equals to 'font-weight: 800'</td>
+							</tr>
+							<tr>
+								<td>letter-spacing-05</td>
+								<td>Equals to 'letter-spacing: 0.5px'</td>
+							</tr>
+							<tr>
+								<td>letter-spacing-1</td>
+								<td>Equals to 'letter-spacing: 1px'</td>
+							</tr>
+							<tr>
+								<td>letter-spacing-2</td>
+								<td>Equals to 'letter-spacing: 2px'</td>
+							</tr>
+							<tr>
+								<td>letter-spacing-3</td>
+								<td>Equals to 'letter-spacing: 3px'</td>
+							</tr>
+							<tr>
+								<td>letter-spacing-4</td>
+								<td>Equals to 'letter-spacing: 4px'</td>
+							</tr>
+							<tr>
+								<td>line-height-100</td>
+								<td>Equals to 'line-height: 100%'</td>
+							</tr>
+							<tr>
+								<td>line-height-110</td>
+								<td>Equals to 'line-height: 110%'</td>
+							</tr>
+							<tr>
+								<td>line-height-120</td>
+								<td>Equals to 'line-height: 120%'</td>
+							</tr>
+							<tr>
+								<td>line-height-130</td>
+								<td>Equals to 'line-height: 130%'</td>
+							</tr>
+							<tr>
+								<td>line-height-140</td>
+								<td>Equals to 'line-height: 140%'</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div class="content-box margin-top-60">
+					<h4 class="margin-bottom-40 text-center">Text Colors</h4>
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<th>HTML Class Names</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>text-white</td>
+								<td>Equals to 'rgb(255,255,255)'</td>
+							</tr>
+							<tr>
+								<td>text-white-09</td>
+								<td>Equals to 'rgba(255,255,255,0.9)'</td>
+							</tr>
+							<tr>
+								<td>text-white-08</td>
+								<td>Equals to 'rgba(255,255,255,0.8)'</td>
+							</tr>
+							<tr>
+								<td>text-white-07</td>
+								<td>Equals to 'rgba(255,255,255,0.7)'</td>
+							</tr>
+							<tr>
+								<td>text-white-06</td>
+								<td>Equals to 'rgba(255,255,255,0.6)'</td>
+							</tr>
+							<tr>
+								<td>text-white-05</td>
+								<td>Equals to 'rgba(255,255,255,0.5)'</td>
+							</tr>
+							<tr>
+								<td>text-white-04</td>
+								<td>Equals to 'rgba(255,255,255,0.4)'</td>
+							</tr>
+							<tr>
+								<td>text-white-03</td>
+								<td>Equals to 'rgba(255,255,255,0.3)'</td>
+							</tr>
+							<tr>
+								<td>text-white-02</td>
+								<td>Equals to 'rgba(255,255,255,0.2)'</td>
+							</tr>
+							<tr>
+								<td>text-white-01</td>
+								<td>Equals to 'rgba(255,255,255,0.1)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal</td>
+								<td>Equals to 'rgb(44,57,67)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-09</td>
+								<td>Equals to 'rgba(44,57,67,0.9)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-08</td>
+								<td>Equals to 'rgba(44,57,67,0.8)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-07</td>
+								<td>Equals to 'rgba(44,57,67,0.7)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-06</td>
+								<td>Equals to 'rgba(44,57,67,0.6)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-05</td>
+								<td>Equals to 'rgba(44,57,67,0.5)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-04</td>
+								<td>Equals to 'rgba(44,57,67,0.4)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-03</td>
+								<td>Equals to 'rgba(44,57,67,0.3)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-02</td>
+								<td>Equals to 'rgba(44,57,67,0.2)'</td>
+							</tr>
+							<tr>
+								<td>text-charcoal-01</td>
+								<td>Equals to 'rgba(44,57,67,0.1)'</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="credits">
+				<div class="title">
+					<h2>Credits</h2>
+				</div>
+				<div class="content-box">
+					<p class="text-center margin-bottom-20">Huge thanks to all this great plugins and resources.</p>
+					<div class="table-responsive">
+						<table class="table table-bordered margin-0">
+							<tr>
+								<th>Term</th>
+								<th>Link</th>
+							</tr>
+							<tr>
+								<td>Bootstrap</td>
+								<td><a href="http://getbootstrap.com" target="_blank">getbootstrap.com</a></td>
+							</tr>
+							<tr>
+								<td>FontAwesome</td>
+								<td><a href="https://fontawesome.com/" target="_blank">fontawesome.com</a></td>
+							</tr>
+							<tr>
+								<td>GLightbox</td>
+								<td><a href="https://biati-digital.github.io/glightbox/" target="_blank">biati-digital.github.io/glightbox/</a></td>
+							</tr>
+							<tr>
+								<td>Retina</td>
+								<td><a href="http://imulus.github.io/retinajs/" target="_blank">imulus.github.io/retinajs</a></td>
+							</tr>
+							<tr>
+								<td>Swiper</td>
+								<td><a href="https://swiperjs.com/" target="_blank">swiperjs.com/</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://www.freepik.com/author/kamranaydinov" target="_blank">www.freepik.com/author/kamranaydinov</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://unsplash.com" target="_blank">unsplash.com</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://pexels.com" target="_blank">pexels.com</a></td>
+							</tr>
+						</table>
+					</div>
+					<h6 class="mt-5">Demo Images:</h6>
+					<div class="table-responsive">
+						<table class="table table-bordered margin-0">
+							<tr>
+								<th>Sources</th>
+							</tr>
+							<tr>
+								<td><a href="https://www.freepik.com/author/kamranaydinov" target="_blank">www.freepik.com/author/kamranaydinov</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://unsplash.com" target="_blank">unsplash.com</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://pexels.com" target="_blank">pexels.com</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- ***** JAVASCRIPTS ***** -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/retina.min.js"></script>
+		<script src="assets/prism/prism.js"></script>
+		<script src="assets/js/functions.js"></script>
+	</body>
+</html>

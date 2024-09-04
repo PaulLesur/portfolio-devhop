@@ -1,0 +1,38 @@
+//
+// Testimonial //
+//
+.testimonial-pagination-wrapper {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: inline-block;
+	background: $charcoal;
+	padding: 14px;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	.testimonial-pagination {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		@include display-flex;
+		.swiper-pagination-bullet {
+			background: $white-30;
+			width: 5px;
+			height: 5px;
+			margin: 0 3px;
+			border-radius: 3px;
+			opacity: 1;
+			@include transition(linear 0.1s);
+			&.swiper-pagination-bullet-active {
+				background: white;
+				width: 13px;
+			}
+		}
+	}
+}
+.theme-dark {
+	.testimonial-pagination-wrapper {
+		background: $white-10;
+	}
+}
