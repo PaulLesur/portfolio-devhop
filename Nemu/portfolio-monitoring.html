@@ -76,19 +76,9 @@
 			<div class="container">
 				<div class="row g-5">
 					<div class="col-12 col-xl-8">
-						<h1 class="display-2 fw-medium">Serveur personnel</h1>
-						<p>Pour mes besoins personnels et mon plaisir je loue un serveur dédié chez OVH afin d'auto-herberger les services dont j'ai besoin. Je vous tout d'abord avoir une solution de cloud personnel qui aie les mêmes fonctionnalités que les cloud connus (Google Drive, OneDrive, ICloud...) mais où je reste maître de mes données.</p>
-						<p>J'avais pour cela besoin d'une solution qui me permettait de gérer :
-						<ul>
-							<li>mes fichiers</li>
-							<li>mes contacts</li>
-							<li>mes calendriers</li>
-							<li>mes listes de taches</li>
-							<li>mes mots de passe</li>
-						</ul>
-						</p>
+						<h1 class="display-2 fw-medium">Stack de monitoring</h1>
 						<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium uppercase mt-3">
-							<span>Client: Moi !</span>
+							<span>Client: Startup tech ayant des applications web</span>
 						</div>
 					</div>
 					<div class="col-12 col-xl-4">
@@ -96,7 +86,7 @@
 							<div class="row g-3 g-md-4">
 								<div class="col-12 col-md-6 col-xl-12">
 									<h5 class="fw-medium mb-0">Nature du projet :</h5>
-									<p>Hébergement d'un cloud personnel</p>
+									<p>Implémentation d'une stack de monitoring avec Prometheus, Grafana et Loki</p>
 								</div>
 								<div class="col-12 col-md-6 col-xl-12">
 									<h5 class="fw-medium mb-0">Stack technique :</h5>
@@ -104,13 +94,16 @@
 										<span><i class="fa-brands fa-docker"></i> Docker</span>
 									</div>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-database"></i> MariaDB</span>
+										<span><i class="fa-brands fa-docker"></i> Kubernetes</span>
 									</div>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-brands fa-php"></i> PHP</span>
+										<span><i class="fa-database"></i> Prometheus</span>
 									</div>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-solid fa-cloud"></i> VPS OVH</span>
+										<span><i class="fa-brands fa-php"></i> Grafana</span>
+									</div>
+									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
+										<span><i class="fa-solid fa-cloud"></i> Loki</span>
 									</div>
 								</div>
 							</div><!-- end row(inner) -->
@@ -143,24 +136,36 @@
 				</div>
 
 				<!-- Heading -->
-				<h2 class="fw-medium mt-4 mt-lg-5">Nextcloud : la solution complète</h2>
 
-				<!-- Paragraph - 2 columns -->
-				<div class="row g-4">
-					<div class="col-12 col-lg-6">
-						<p>La solution la plus complète que j'ai pu trouver est Nextcloud. Il embarque toute ses fonctionnalités, est extensible et des clients sont développé pour PC et Android.</p>
-					</div>
-					<div class="col-12 col-lg-6">
-						<p>Pour installer Nextcloud, j'ai utilisé l'image Docker dans un docker-compose. Ce docker-compose contient un container Nextcloud ainsi qu'une base de données MariaDB.</p>
-					</div>
-				</div>
 				<div class="mt-4 mt-lg-5">
 					<!-- Heading -->
-					<h2 class="fw-medium">Ajout d'autres services</h2>
+					<h2 class="fw-medium">Contexte du projet</h2>
 
 					<!-- Paragraph -->
-					<p>Par la suite j'ai voulu héberger d'autres services comme Photoprism pour gérer ma phototèque ou encore Jellyfin pour gérer mes medias vidéos.</p>
-				</div>	
+					<p>Le client, une startup, souhaitait avoir de la visibilité sur l'état de santé de son infrastructure et de son application web. L'objectif était de mettre en place une solution de monitoring robuste, permettant de détecter rapidement les anomalies et d'agir avant qu'elles n'affectent l'expérience utilisateur. J'ai donc été sollicité pour implémenter une stack de monitoring complète, basée sur Prometheus pour la collecte des métriques, Grafana pour la visualisation, et Loki pour la centralisation des logs.</p>
+				</div>
+
+				<div class="mt-4 mt-lg-5">
+					<!-- Heading -->
+					<h2 class="fw-medium">Défis rencontrés</h2>
+					<ul>
+						<li><b>Scalabilité :</b> Le volume de données généré par l'application et l'infrastructure nécessitait une solution capable de gérer des métriques et logs en temps réel, tout en restant évolutive.</li>
+						<li><b>Alerting en temps réel :</b> Il était crucial de définir des règles d'alerte efficaces pour détecter les anomalies avant que les utilisateurs finaux ne soient impactés.</li>
+						<li><b>Corrélation des logs et métriques :</b> Assurer une corrélation fluide entre les logs de l'application (Loki) et les métriques systèmes (Prometheus) afin de faciliter le diagnostic des incidents.</li>
+					</ul>
+					
+				</div>
+
+				<div class="mt-4 mt-lg-5"></div>
+					<!-- Heading -->
+					<h2 class="fw-medium">Solutions apportées</h2>
+					<ul>
+						<li><b>Prometheus pour la collecte des métriques :</b> J'ai mis en place Prometheus pour surveiller l'infrastructure, incluant des métriques clés sur les performances des nodes Kubernetes (CPU, RAM, utilisation du disque).</li>
+						<li><b>Grafana pour la visualisation et le reporting :</b> En intégrant Grafana, j'ai créé des tableaux de bord sur mesure, permettant de visualiser en temps réel les métriques critiques.</li>
+						<li><b>Loki pour la gestion des logs</b> Afin de centraliser et d'analyser les logs, j'ai installé Loki. Cela a permis de faciliter la recherche et la corrélation des événements à travers les logs applicatifs, notamment pour diagnostiquer des problèmes complexes et récurrents.</li>
+						<li><b>Automatisation avec Kubernetes et Docker</b> La stack de monitoring a été déployée sur Kubernetes, avec des conteneurs Docker pour Prometheus, Grafana et Loki. Cela a assuré une gestion simplifiée et une évolutivité naturelle de l'infrastructure.</li>
+					</ul>
+				</div>
 			</div><!-- end container -->
 		</div>
 		<!-- end Project details -->
