@@ -79,9 +79,9 @@
 						<h1 class="display-2 fw-medium">Mise en place de SLI SLO SLA</h1>
 						<h2 class="fw-medium">Contexte du projet</h2>
 						<!-- Paragraph -->
-						<p>En tant que Site Reliability Engineer (SRE) avec 4 ans d’expérience, j’ai eu l’opportunité de contribuer à l'amélioration de la fiabilité et des performances des systèmes dans mon entreprise. L'une des initiatives clés a été la mise en place de SLI (Service Level Indicators), SLO (Service Level Objectives) et SLA (Service Level Agreements), essentiels pour assurer la stabilité, la performance et la disponibilité des services critiques.</p>
+						<p>En tant que développeur full-stack, j’ai eu l’opportunité de participer au développement d’un marketplace à grande échelle pour une entreprise de e-commerce. Ce projet stratégique visait à créer une plateforme centralisant des vendeurs tiers, leur permettant de vendre directement aux consommateurs finaux via un écosystème intégré. Nous avons utilisé IBM WebSphere Commerce, un framework puissant spécialisé dans les solutions e-commerce, pour concevoir et mettre en œuvre ce marketplace.</p>
 						<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium uppercase mt-3">
-							<span>Client: Scale-up tech en forte croissance</span>
+							<span>Client: ESN</span>
 						</div>
 					</div>
 					<div class="col-12 col-xl-4">
@@ -89,18 +89,21 @@
 							<div class="row g-3 g-md-4">
 								<div class="col-12 col-md-6 col-xl-12">
 									<h5 class="fw-medium mb-0">Nature du projet :</h5>
-									<p>Mise en place d'indicateurs de performance afin d'observer et améliorer les performance et la disponibilité des services.</p>
+									<p>Développement d'une plateforme e-commerce</p>
 								</div>
 								<div class="col-12 col-md-6 col-xl-12">
 									<h5 class="fw-medium mb-0">Stack technique :</h5>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-solid fa-search"></i> Opensearch</span>
+										<span><i class="fa-brands fa-react"></i> React</span>
 									</div>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-solid fa-chart-simple"></i> Opensearch Dashboard</span>
+										<span><i class="fa-brands fa-java"></i> Java 6</span>
 									</div>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-regular fa-file-lines"></i> Fluentd / Fluentbit</span>
+										<span><i class="fa-solid fa-server"></i> IBM WebSphere Commerce</span>
+									</div>
+									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
+										<span><i class="fa-solid fa-database"></i> Oracle</span>
 									</div>
 								</div>
 							</div><!-- end row(inner) -->
@@ -135,43 +138,30 @@
 				<!-- Heading -->
 				<div class="mt-4 mt-lg-5">
 					<!-- Heading -->
-					<h2 class="fw-medium">Définition des Objectifs et Indicateurs</h2>
-					<h3 class="fw-medium">Service Level Indicators (SLI)</h3>
-					<p>Les SLI sont des indicateurs qui mesurent la qualité d’un service. Lors de leur définition, j’ai collaboré avec des équipes produit et techniques pour identifier les points les plus critiques pour nos utilisateurs. Parmi les métriques suivies :</p>
+					<h2 class="fw-medium">Objectifs du projet</h2>
+					<p>Les objectifs du développement de cette marketplace étaient :</p>
 					<ul>
-						<li><b>Disponibilité :</b>  Mesure du pourcentage de temps pendant lequel le service est opérationnel.</li>
-						<li><b>Temps de réponse : </b> Suivi du temps moyen de traitement des requêtes utilisateurs</li>
-						<li><b>Taux d'erreurs :</b> Suivi du nombre d'erreurs. </li>
+						<li>Créer une plateforme robuste permettant à des vendeurs multiples de proposer leurs produits tout en conservant une gestion centralisée des commandes, paiements et livraisons.</li>
+						<li>Faciliter l’intégration des vendeurs tiers, en simplifiant l’inscription, la gestion des produits et la gestion des commandes.</li>
+						<li>Optimiser l’expérience utilisateur pour les acheteurs en proposant une interface fluide et intuitive, avec des fonctionnalités telles que la recherche avancée, les filtres de produits, et un système de paiement sécurisé.</li>
+						<li>Assurer une évolutivité de la plateforme pour accueillir un nombre croissant de vendeurs et de produits tout en maintenant de hautes performances.</li>
 					</ul>
-					
-					<h3 class="fw-medium">Service Level Objectives (SLO)</h3>
-					<p>Les SLI sont des indicateurs qui mesurent la qualité d’un service. Lors de leur définition, j’ai collaboré avec des équipes produit et techniques pour identifier les points les plus critiques pour nos utilisateurs. Parmi les métriques suivies :</p>
-					<ul>
-						<li>Disponibilité de 99.95 % pour les services critiques.</li>
-						<li>Temps de réponse inférieur à 200ms pour les API.</li>
-						<li>Taux d’erreurs inférieur à 0.1 % sur les transactions utilisateur.</li>
-					</ul>
-					<p>Ces SLO sont régulièrement revus et ajustés pour s’adapter à l’évolution des besoins et de la charge.</p>
-
-					<h3 class="fw-medium">Service Level Agreements (SLA)</h3>
-					<p>Les SLA sont des engagements formels pris envers nos utilisateurs ou clients.</p>
 					
 				</div>
 
 				<div class="mt-4 mt-lg-5">
 					<!-- Heading -->
-					<h2 class="fw-medium">Processus de mise en oeuvre</h2>
+					<h2 class="fw-medium">Technologies utilisées</h2>
 					<ul>
-						<li><b>Analyse des besoin utilisateur</b> Comprendre ce qui était le plus important pour nos utilisateurs en termes de fiabilité et de performance.</li>
-						<li><b>Collecte des données :</b>  Mise en place d'outils de monitoring pour collecter les métriques nécessaires à la mesure des SLI, via Opensearch, Opensearch Dashboards et d’autres solutions de surveillance.</li>
-						<li><b>Monitoring et détection des anomalies :</b> J'ai configuré des outils de monitoring pour détecter des comportements anormaux dans l'usage de l'application.</li>
-						<li><b>Communication</b> Collaboration avec toutes les parties prenantes (produit, technique, business) pour assurer une transparence sur les niveaux de service fournis.</li>
+						<li>IBM WebSphere Commerce : Le cœur de la plateforme, utilisé pour la gestion des produits, des commandes, des promotions, et des intégrations avec des systèmes de paiement.</li>
+						<li>Java et JSP (JavaServer Pages) : Pour le développement back-end, incluant la logique métier complexe et les services d’intégration.</li>
+						<li>HTML5, CSS3, JavaScript (React) : Pour le front-end, afin de créer une interface utilisateur moderne et réactive.</li>
 					</ul>
 				</div>
 				<div class="mt-4 mt-lg-5">
 					<!-- Heading -->
 					<h2 class="fw-medium">Conclusion</h2>
-					<p>La mise en place des SLI, SLO et SLA a permis non seulement d'améliorer la fiabilité des services, mais aussi d’instaurer un cadre de travail où la qualité des services est mesurée et ajustée en continu. Cette expérience m’a permis de développer une expertise solide en gestion des performances et des SLA, tout en renforçant ma capacité à collaborer efficacement avec des équipes pluridisciplinaires.</p>
+					<p>Cette mission de développement full-stack sur le projet de marketplace m’a permis de découvrir le développement d’applications e-commerce à grande échelle. L’utilisation d’IBM WebSphere Commerce m’a permis de maîtriser les outils et les processus spécifiques à cette solution de pointe, tout en relevant les défis techniques liés à la gestion des vendeurs tiers et à l’optimisation de l’expérience utilisateur. Cette expérience m’a permis de contribuer directement à la réussite d’un projet crucial pour l’entreprise.</p>
 				</div>
 			</div><!-- end container -->
 		</div>
