@@ -76,12 +76,12 @@
 			<div class="container">
 				<div class="row g-5">
 					<div class="col-12 col-xl-8">
-						<h1 class="display-2 fw-medium">Stack de monitoring</h1>
+						<h1 class="display-2 fw-medium">Mise en place de SLI SLO SLA</h1>
 						<h2 class="fw-medium">Contexte du projet</h2>
-					<!-- Paragraph -->
-						<p>Le client, une startup, souhaitait avoir de la visibilité sur l'état de santé de son infrastructure et de son application web. L'objectif était de mettre en place une solution de monitoring robuste, permettant de détecter rapidement les anomalies et d'agir avant qu'elles n'affectent l'expérience utilisateur. J'ai donc été sollicité pour implémenter une stack de monitoring complète, basée sur Prometheus pour la collecte des métriques, Grafana pour la visualisation, et Loki pour la centralisation des logs.</p>
+						<!-- Paragraph -->
+						<p>En tant que Site Reliability Engineer (SRE) avec 4 ans d’expérience, j’ai eu l’opportunité de contribuer à l'amélioration de la fiabilité et des performances des systèmes dans mon entreprise. L'une des initiatives clés a été la mise en place de SLI (Service Level Indicators), SLO (Service Level Objectives) et SLA (Service Level Agreements), essentiels pour assurer la stabilité, la performance et la disponibilité des services critiques.</p>
 						<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium uppercase mt-3">
-							<span>Client: Startup tech ayant des applications web</span>
+							<span>Client: Scale-up tech en forte croissance</span>
 						</div>
 					</div>
 					<div class="col-12 col-xl-4">
@@ -89,28 +89,18 @@
 							<div class="row g-3 g-md-4">
 								<div class="col-12 col-md-6 col-xl-12">
 									<h5 class="fw-medium mb-0">Nature du projet :</h5>
-									<p>Implémentation d'une stack de monitoring avec Prometheus, Grafana et Loki</p>
+									<p>Mise en place d'indicateurs de performance afin d'observer et améliorer les performance et la disponibilité des services.</p>
 								</div>
 								<div class="col-12 col-md-6 col-xl-12">
 									<h5 class="fw-medium mb-0">Stack technique :</h5>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-brands fa-docker"></i> Docker</span>
+										<span><i class="fa-solid fa-search"></i> Opensearch</span>
 									</div>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-solid fa-cube"></i> Kubernetes</span>
+										<span><i class="fa-solid fa-chart-simple"></i> Opensearch Dashboard</span>
 									</div>
 									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-solid fa-gear"></i> Helm</span>
-									</div>
-									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-solid fa-fire"></i> Prometheus</span>
-									</div>
-									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-solid fa-chart-simple"></i> Grafana</span>
-									</div>
-									<div class="d-inline-block dashed-box font-small font-family-secondary fw-medium mt-1">
-										<span><i class="fa-regular fa-file-lines"></i> Loki</span>
-									</div>
+										<span><i class="fa-regular fa-file-lines"></i> Fluentd / Fluentbit</span>
 									</div>
 								</div>
 							</div><!-- end row(inner) -->
@@ -145,24 +135,43 @@
 				<!-- Heading -->
 				<div class="mt-4 mt-lg-5">
 					<!-- Heading -->
-					<h2 class="fw-medium">Défis rencontrés</h2>
+					<h2 class="fw-medium">Définition des Objectifs et Indicateurs</h2>
+					<h3 class="fw-medium">Service Level Indicators (SLI)</h3>
+					<p>Les SLI sont des indicateurs qui mesurent la qualité d’un service. Lors de leur définition, j’ai collaboré avec des équipes produit et techniques pour identifier les points les plus critiques pour nos utilisateurs. Parmi les métriques suivies :</p>
 					<ul>
-						<li><b>Scalabilité :</b> Le volume de données généré par l'application et l'infrastructure nécessitait une solution capable de gérer des métriques et logs en temps réel, tout en restant évolutive.</li>
-						<li><b>Alerting en temps réel :</b> Il était crucial de définir des règles d'alerte efficaces pour détecter les anomalies avant que les utilisateurs finaux ne soient impactés.</li>
-						<li><b>Corrélation des logs et métriques :</b> Assurer une corrélation fluide entre les logs de l'application (Loki) et les métriques systèmes (Prometheus) afin de faciliter le diagnostic des incidents.</li>
+						<li><b>Disponibilité :</b>  Mesure du pourcentage de temps pendant lequel le service est opérationnel.</li>
+						<li><b>Temps de réponse : </b> Suivi du temps moyen de traitement des requêtes utilisateurs</li>
+						<li><b>Taux d'erreurs :</b> Suivi du nombre d'erreurs. </li>
 					</ul>
+					
+					<h3 class="fw-medium">Service Level Objectives (SLO)</h3>
+					<p>Les SLI sont des indicateurs qui mesurent la qualité d’un service. Lors de leur définition, j’ai collaboré avec des équipes produit et techniques pour identifier les points les plus critiques pour nos utilisateurs. Parmi les métriques suivies :</p>
+					<ul>
+						<li>Disponibilité de 99.95 % pour les services critiques.</li>
+						<li>Temps de réponse inférieur à 200ms pour les API.</li>
+						<li>Taux d’erreurs inférieur à 0.1 % sur les transactions utilisateur.</li>
+					</ul>
+					<p>Ces SLO sont régulièrement revus et ajustés pour s’adapter à l’évolution des besoins et de la charge.</p>
+
+					<h3 class="fw-medium">Service Level Agreements (SLA)</h3>
+					<p>Les SLA sont des engagements formels pris envers nos utilisateurs ou clients.</p>
 					
 				</div>
 
-				<div class="mt-4 mt-lg-5"></div>
+				<div class="mt-4 mt-lg-5">
 					<!-- Heading -->
-					<h2 class="fw-medium">Solutions apportées</h2>
+					<h2 class="fw-medium">Processus de mise en oeuvre</h2>
 					<ul>
-						<li><b>Prometheus pour la collecte des métriques :</b> J'ai mis en place Prometheus pour surveiller l'infrastructure, incluant des métriques clés sur les performances des nodes Kubernetes (CPU, RAM, utilisation du disque).</li>
-						<li><b>Grafana pour la visualisation et le reporting :</b> En intégrant Grafana, j'ai créé des tableaux de bord sur mesure, permettant de visualiser en temps réel les métriques critiques.</li>
-						<li><b>Loki pour la gestion des logs</b> Afin de centraliser et d'analyser les logs, j'ai installé Loki. Cela a permis de faciliter la recherche et la corrélation des événements à travers les logs applicatifs, notamment pour diagnostiquer des problèmes complexes et récurrents.</li>
-						<li><b>Automatisation avec Kubernetes et Docker</b> La stack de monitoring a été déployée sur Kubernetes, avec des conteneurs Docker pour Prometheus, Grafana et Loki. Cela a assuré une gestion simplifiée et une évolutivité naturelle de l'infrastructure.</li>
+						<li><b>Analyse des besoin utilisateur</b> Comprendre ce qui était le plus important pour nos utilisateurs en termes de fiabilité et de performance.</li>
+						<li><b>Collecte des données :</b>  Mise en place d'outils de monitoring pour collecter les métriques nécessaires à la mesure des SLI, via Opensearch, Opensearch Dashboards et d’autres solutions de surveillance.</li>
+						<li><b>Monitoring et détection des anomalies :</b> J'ai configuré des outils de monitoring pour détecter des comportements anormaux dans l'usage de l'application.</li>
+						<li><b>Communication</b> Collaboration avec toutes les parties prenantes (produit, technique, business) pour assurer une transparence sur les niveaux de service fournis.</li>
 					</ul>
+				</div>
+				<div class="mt-4 mt-lg-5">
+					<!-- Heading -->
+					<h2 class="fw-medium">Conclusion</h2>
+					<p>La mise en place des SLI, SLO et SLA a permis non seulement d'améliorer la fiabilité des services, mais aussi d’instaurer un cadre de travail où la qualité des services est mesurée et ajustée en continu. Cette expérience m’a permis de développer une expertise solide en gestion des performances et des SLA, tout en renforçant ma capacité à collaborer efficacement avec des équipes pluridisciplinaires.</p>
 				</div>
 			</div><!-- end container -->
 		</div>
